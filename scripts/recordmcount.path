@@ -1,0 +1,19 @@
+--- recordmcount.old.c	2013-01-27 17:49:57.000000000 -0300
++++ recordmcount.c	2013-01-27 16:54:30.000000000 -0300
+@@ -32,6 +32,16 @@
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
++#include <stdint.h>
++
++#define R_IA64_IMM64		0x23	/* symbol + addend, mov imm64 */
++#define R_PPC_ADDR32		1	/* 32bit absolute address */
++#define R_PPC64_ADDR64          38 
++#define	R_SH_DIR32		1
++#define R_SPARC_64		32
++#define R_X86_64_64		1	/* Direct 64 bit  */
++#define R_390_32		4	/* Direct 32 bit.  */
++#define R_390_64		22	/* Direct 64 bit.  */
+ 
+ static int fd_map;	/* File descriptor for file being modified. */
+ static int mmap_failed; /* Boolean flag. */

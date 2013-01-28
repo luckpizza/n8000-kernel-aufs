@@ -1,0 +1,10 @@
+***************
+*** 124,126 ****
+  obj-$(CONFIG_EXOFS_FS)          += exofs/
+  obj-$(CONFIG_CEPH_FS)		+= ceph/
+  obj-$(CONFIG_PSTORE)		+= pstore/
+--- 124,127 ----
+  obj-$(CONFIG_EXOFS_FS)          += exofs/
+  obj-$(CONFIG_CEPH_FS)		+= ceph/
+  obj-$(CONFIG_PSTORE)		+= pstore/
++ obj-$(CONFIG_AUFS_FS)           += aufs/
